@@ -8,14 +8,14 @@
 --accent-color: #2196F3;
 --contact-color: rgba(255, 255, 255, 0.6);
 --border-color: #ECECEC;
-
+--border-color-social: #AFB1B8;
 /* bacsground */
 --main-bacsground-color: #FFFFFF;
 --secondary-bacsground-color: #F5F4FA;
 --button-bacsground-color: #2196F3;
 --accent-bacsground-color: #188CE8;
 --footer-bacsground-color: #2F303A;
-
+--hero-bacsground-color: #C4C4C4;
 /* others */
 --indent: 30px;
 --items: 3;
@@ -28,6 +28,16 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+}
+.title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-title-color);
+
 }
 
 img {
@@ -143,15 +153,31 @@ padding-top: 32px;
     margin-right: 50px;
 }
 .header-link {
-        color: var(--main-text-color);
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    color: var(--main-text-color);
+}
+.icon-envelope, .icon-smartphone {
+    margin-right: 10px;
+    fill: currentColor;
+
+}
 
 /* -------------------HERO------------------- */
 .hero {
-    background-color: var(--footer-bacsground-color);
+    max-width: 1600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 200px;
     padding-top: 200px;
+    background-color: var(--hero-bacsground-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-backround.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-title {
@@ -168,7 +194,7 @@ padding-top: 32px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--secondary-title-color);
-    background-color: var(--footer-bacsground-color);
+
 }
 
 .hero-button {
@@ -201,9 +227,23 @@ padding-top: 32px;
     gap: 30px;
 }
 .advantages-item {
+    
     width: 270px;
 }
+.icon-srapper {
 
+}
+.icon-advantages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 22px;
+   
+    background: var(--secondary-bacsground-color);
+    border-radius: 4px;
+}
 .advantages-title {
     margin-bottom: 10px;
 
@@ -226,16 +266,6 @@ padding-top: 32px;
 /* --------Чим ми займаємося------ */
 .services {
     padding-top: 0;
-}
-.services-title, .team-title {
-    margin-bottom: 50px;
-
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--main-title-color);
-
 }
 
 /* -------Наша команда-------- */
@@ -276,11 +306,86 @@ padding-top: 32px;
 .team-occupation {
     font-weight: 400;
     font-size: 16px;
+    margin-bottom: 16px;
     line-height: calc(19 / 16);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
 }
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.socials-item {
+    width: 44px;
+    height: 44px;
+}
+.socials-item:not(:last-child) {
+    margin-right: 10px;
+}
+.socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--main-bacsground-color);
+  
+}
+
+.socials-icon {
+    fill: #AFB1B8;
+}
+.socials-link:hover, .socials-link:focus {
+    background-color: var(--accent-bacsground-color);
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+    fill: var(--secondary-title-color);
+   
+}
+/* --------------------------------Clients--------------- */
+.clients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clients-item {
+    width: 170px;
+    height: 92px;
+   
+}
+
+.clients-item:not(:last-child) {
+    margin-right: 30px;
+}
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color-social);
+    border-radius: 4px;
+}
+.clients-icon {
+    fill: #AFB1B8;
+}
+.clients-link:hover,
+.clients-link:focus {
+    border: 1px solid var(--accent-color);
+
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+    fill: #2196F3;
+}
+
+
 /* ------------------------------FOOTER------------------------ */
 .footer {
     
@@ -326,8 +431,54 @@ margin-bottom: 9px;
 .address-contact:hover,.address-contact:focus {
     color: var(--accent-color);
 }
+.footer-div {
+    display: flex;
+}
+.wraper-address {
+    margin-right: 70px;
+}
 
 
+.footer-title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: var(--secondary-title-color);
+}
+.footer-socials-list {
+    display: flex;
+    justify-content: start;
+  
+}
+.footer-socials-item {
+width: 44px;
+height: 44px;
+border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   
+    
+}
+
+.footer-socials-item:not(:last-child) {
+    margin-right: 10px;
+}
+.footer-socials-link {
+    fill: #FFFFFF;
+}
+.footer-socials-item:hover,
+.footer-socials-item:focus {
+    background-color: var(--button-bacsground-color);
+}
 /* ==================================PORTFOLIO=============================================== */
 .filter-list {
     display: flex;
@@ -349,16 +500,21 @@ margin-bottom: 9px;
     border: none;
     color: var(--main-title-color);
     background-color: var(--secondary-bacsground-color);
+    border-radius: 4px;
 }
 .filter-button:hover, .filter-button:focus {
     color: var(--main-bacsground-color);
     background-color: var(--button-bacsground-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
-.portfolio-link:hover, .portfolio-link:focus {
-    background-color: var(--button-bacsground-color);
+.portfolio-item:hover, .portfolio-item:focus {
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
-.portfolio-wrapper{
+
+.portfolio-wrapper {
     padding: 20px 24px;
     border-right: 1px solid var(--border-color);
     border-left: 1px solid var(--border-color);
