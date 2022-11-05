@@ -245,11 +245,15 @@ img {
     border: none;
     color: var(--secondary-title-color);
     background-color: var(--button-bacsground-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
     background-color: var(--accent-bacsground-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 /* --------Наші переваги-------- */
@@ -273,7 +277,7 @@ img {
     align-items: center;
     width: 270px;
     height: 120px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
 
     background: var(--secondary-bacsground-color);
     border-radius: 4px;
@@ -536,6 +540,7 @@ img {
     align-items: center;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     color: var(--secondary-title-color);
 
 }
@@ -548,10 +553,11 @@ img {
     fill: currentColor;
 }
 
-.footer-socials-item:hover,
-.footer-socials-item:focus {
+.footer-socials-link:hover,
+.footer-socials-link:focus {
     background-color: var(--button-bacsground-color);
 }
+
 
 /* ==================================PORTFOLIO=============================================== */
 .filter-list {
@@ -591,7 +597,6 @@ img {
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-    border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
