@@ -134,10 +134,7 @@ img {
     margin-right: 93px;
 }
 
-.logo:hover,
-.logo:focus {
-    text-decoration: underline;
-}
+
 
 .header-list {
     display: flex;
